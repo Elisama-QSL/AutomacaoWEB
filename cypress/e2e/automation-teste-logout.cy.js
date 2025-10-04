@@ -14,11 +14,12 @@ describe('Automation Test Case', () => {
         cy.get('[data-qa="login-password"]').type('qa1234', {log: false})
         cy.get('[data-qa="login-button"]').click()
 
-        cy.contains('b', 'qaTesteCase')
+        //cy.contains('b', 'qaTesteCase')
+        cy.get('fa fa-user').parent().should('contain','qaTesteCase')
+        cy.get('a[href="/login"]').should('be.visible').click()
+      //  cy.get(`.shop-menu > .nav > :nth-child(4) > a`).click()
 
-        cy.get(`.shop-menu > .nav > :nth-child(4) > a`).click()
-
-        cy.url().should('include', 'automationexercise')
+        cy.url().should('contain', 'login')
         
     });
 });
