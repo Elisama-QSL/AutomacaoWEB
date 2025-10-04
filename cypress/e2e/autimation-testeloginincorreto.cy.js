@@ -14,7 +14,7 @@ describe('Automation Test Case', () => {
         cy.get('[data-qa="login-password"]').type('qa', {log: false})
         cy.get('[data-qa="login-button"]').click()
 
-        cy.get(`.login-form > form > p`)
+        cy.get(`.login-form > form > p`).should('contain', 'Your email or password is incorrect!')
     
         
     });
