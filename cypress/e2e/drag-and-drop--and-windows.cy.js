@@ -1,8 +1,7 @@
 /// <reference types="cypress" />
-const { cy } = require("@faker-js/faker");
 
 describe('Drag and Drop and Windows', () => {
-    it.only('Multiple Windows', () => {
+    it('Multiple Windows', () => {
         cy.visit('https://the-internet.herokuapp.com/windows')
 
         

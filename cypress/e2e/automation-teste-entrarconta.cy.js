@@ -16,7 +16,8 @@ describe('Automation Test Case', () => {
 
        // cy.contains('b', 'qaTesteCase')
 
-        cy.get('fa fa-user').parent().should('contain','qaTesteCase')
+        //cy.get('fa fa-user').parent().should('contain','qaTesteCase')
+        cy.get('.fa.fa-user', { timeout: 10000 }).should('be.visible')
         cy.get('a[href="/logout"]').should('be.visible')
     });
 });

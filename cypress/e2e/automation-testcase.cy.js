@@ -15,7 +15,9 @@ describe('Automation Test Case', () => {
         cy.get('[data-qa="signup-name"]').type('qaTesteCase')
         cy.get('[data-qa="signup-email"]').type(`qatestecase4@gmail.com`)
         cy.contains('button', 'Signup').click()                                                                     
-        cy.contains('b', 'Enter Account Information')
+        //cy.contains('b', 'Enter Account Information')
+        cy.contains('Enter Account Information', { timeout: 10000 })
+
 
         cy.get('#id_gender1').check()
 

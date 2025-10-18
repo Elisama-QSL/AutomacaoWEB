@@ -26,7 +26,7 @@ describe('Automation Exercise', () => {
     it.only('Cadastrar um usuário', () => {
         const timestamp = new Date().getTime()
 
-        cy.get('[data-qa="signup-name"]').type('qaTester')
+        cy.get('[data-qa="signup-name"]').type(`qaTester`)
         cy.get('[data-qa="signup-email"]').type(`testerqa${timestamp}@gmail.com`)
         
         cy.contains('button', 'Signup').click()

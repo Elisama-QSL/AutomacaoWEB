@@ -15,7 +15,8 @@ describe('Automation Test Case', () => {
         cy.get('[data-qa="login-button"]').click()
 
         //cy.contains('b', 'qaTesteCase')
-        cy.get('fa fa-user').parent().should('contain','qaTesteCase')
+        cy.get('.fa fa-user').parent().should('contain','qaTesteCase')
+        cy.get('.fa.fa-user', { timeout: 10000 }).should('be.visible')
         cy.get('a[href="/login"]').should('be.visible').click()
       //  cy.get(`.shop-menu > .nav > :nth-child(4) > a`).click()
 
