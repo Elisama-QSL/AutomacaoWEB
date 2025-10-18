@@ -5,6 +5,7 @@ describe('Drag and Drop and Windows', () => {
     it.only('Multiple Windows', () => {
         cy.visit('https://the-internet.herokuapp.com/windows')
 
+        
         cy.contains('Click Here')
             .invoke('removeAttr', 'target')
             .click()
