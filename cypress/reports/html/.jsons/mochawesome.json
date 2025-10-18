@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-10-04T20:59:31.734Z",
+    "end": "2025-10-04T20:59:40.908Z",
+    "duration": 9174,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "42151b79-98bd-4702-bd49-3624aa01ad81",
+      "title": "",
+      "fullFile": "cypress\\e2e\\autimation-testeloginincorreto.cy.js",
+      "file": "cypress\\e2e\\autimation-testeloginincorreto.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f26065d1-df51-448d-9dfa-6259cdc85df8",
+          "title": "Automation Test Case",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login na conta",
+              "fullTitle": "Automation Test Case Login na conta",
+              "timedOut": null,
+              "duration": 6561,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://automationexercise.com/');\ncy.url().should('include', 'automationexercise');\ncy.get('a[href=\"/login\"]').click();\ncy.get('.login-form > h2');\ncy.get('[data-qa=\"login-email\"]').type('qa4@gmail.com');\ncy.get('[data-qa=\"login-password\"]').type('qa', {\n  log: false\n});\ncy.get('[data-qa=\"login-button\"]').click();\ncy.get(`.login-form > form > p`).should('contain', 'Your email or password is incorrect!');",
+              "err": {},
+              "uuid": "36f1e6da-8523-44b8-9f4c-9ecb5f4fa474",
+              "parentUUID": "f26065d1-df51-448d-9dfa-6259cdc85df8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "36f1e6da-8523-44b8-9f4c-9ecb5f4fa474"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6561,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.3.0"
+    }
+  }
+}
