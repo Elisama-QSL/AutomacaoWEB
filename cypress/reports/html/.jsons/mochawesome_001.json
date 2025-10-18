@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-10-04T20:59:47.386Z",
+    "end": "2025-10-04T21:00:04.557Z",
+    "duration": 17171,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2f4a9efe-65d1-4cf7-aa5e-5034649dec21",
+      "title": "",
+      "fullFile": "cypress\\e2e\\automation-exercise-module.cy.js",
+      "file": "cypress\\e2e\\automation-exercise-module.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6f65df21-a5a9-43db-b401-c47d9179a167",
+          "title": "Automation Exercise",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Cadastrar um usuário",
+              "fullTitle": "Automation Exercise Cadastrar um usuário",
+              "timedOut": null,
+              "duration": 8958,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\automation-exercise-module.cy.js\\\\Automation Exercise -- Cadastrar um usuário (failed).png\"\n    ]\n  ]\n}",
+              "code": "const timestamp = new Date().getTime();\ncy.get('[data-qa=\"signup-name\"]').type('qaTester');\ncy.get('[data-qa=\"signup-email\"]').type(`testerqa${timestamp}@gmail.com`);\ncy.contains('button', 'Signup').click();\n// cy.get('input[type=radio]').check('Mrs')\ncy.get('#id_gender2').check();\ncy.get('input#password').type('teste123', {\n  log: false\n});\n//para comobox\ncy.get('[data-qa=days]').select('11');\ncy.get('[data-qa=months]').select('May');\ncy.get('[data-qa=years]').select('1991');\ncy.get('input[type=checkbox]#newsletter').check();\ncy.get('input[type=checkbox]#optin').check();\ncy.get('input#first_name').type(_faker.faker.person.firstName());\ncy.get('input#last_name').type(_faker.faker.person.lastName());\ncy.get('input#company').type(_faker.faker.company.name());\ncy.get('input#address1').type(_faker.faker.location.streetAddress());\ncy.get('select#country').select('Canada');\ncy.get('input#state').type(_faker.faker.location.state());\ncy.get('input#city').type(_faker.faker.location.city());\ncy.get('[data-qa=\"zipcode\"]').type(_faker.faker.location.zipCode());\ncy.get('[data-qa=\"mobile_number\"]').type(_faker.faker.phone.number('1199#####99'));\ncy.get('[data-qa=\"create-account\"]').click();\n// Assert\ncy.url().should('includes', 'account_created');\ncy.contains('b', 'Account Created!');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-qa=\"signup-name\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-qa=\"signup-name\"]`, but never found it.\n    at Context.eval (webpack://automacaoweb/./cypress/e2e/automation-exercise-module.cy.js:29:11)",
+                "diff": null
+              },
+              "uuid": "34a2e397-6c61-416f-9dfa-9605553e4aef",
+              "parentUUID": "6f65df21-a5a9-43db-b401-c47d9179a167",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "34a2e397-6c61-416f-9dfa-9605553e4aef"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 8958,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.3.0"
+    }
+  }
+}
